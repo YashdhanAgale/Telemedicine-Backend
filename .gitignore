@@ -1,0 +1,31 @@
+# Node modules (don't push to GitHub)
+node_modules/
+
+# Environment variables (keep secrets safe)
+.env
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Production build (if any)
+dist/
+build/
+
+# Coverage reports (if using testing)
+coverage/
+
+# Others (optional)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
