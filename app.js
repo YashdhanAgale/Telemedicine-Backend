@@ -14,10 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = [
-  "https://telemedicine-frontend-two.vercel.app",
-  "https://telemedicine-frontend-fbqcr76xs-yashodhans-projects-7e631381.vercel.app",
-];
+const allowedOrigins = ["https://telemedicine-frontend-two.vercel.app"];
 
 app.use(
   cors({
@@ -29,8 +26,6 @@ app.use(
       }
     },
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
