@@ -7,15 +7,17 @@ const { Server } = require("socket.io");
 dotenv.config();
 connectDB();
 
-const server = http.createServer(app); // ✅ right way
+const server = http.createServer(app);
+
 const io = new Server(server, {
   cors: {
-    origin: "https://telemedicine-frontend-two.vercel.app/",
+    origin: "https://telemedicine-frontend-two.vercel.app",
     credentials: true,
+    methods: ["GET", "POST"],
   },
+  path: "/socket.io",
 });
 
-// Expose io globally to use in controllers
 app.set("io", io);
 
 io.on("connection", (socket) => {
@@ -26,7 +28,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// ❗ FIX HERE
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`🚀 Server (with WebSocket) running on port ${PORT}`);
