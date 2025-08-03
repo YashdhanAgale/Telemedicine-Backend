@@ -10,7 +10,7 @@ connectDB();
 const server = http.createServer(app); // ✅ right way
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your frontend Vite port
+    origin: "https://telemedicine-frontend-two.vercel.app/",
     credentials: true,
   },
 });

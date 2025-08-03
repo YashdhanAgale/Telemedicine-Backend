@@ -14,7 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "https://telemedicine-frontend-two.vercel.app/",
+  "https://telemedicine-frontend-fbqcr76xs-yashodhans-projects-7e631381.vercel.app",
+];
 
 app.use(
   cors({
