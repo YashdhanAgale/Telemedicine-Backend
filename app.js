@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = [
-  "https://telemedicine-frontend-two.vercel.app/",
+  "https://telemedicine-frontend-two.vercel.app",
   "https://telemedicine-frontend-fbqcr76xs-yashodhans-projects-7e631381.vercel.app",
 ];
 
